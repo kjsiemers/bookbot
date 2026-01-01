@@ -5,4 +5,4 @@ num_words = get_num_words(path_to_file)
 print(f"Found {num_words} total words")
 counts = get_letter_counts(path_to_file)
 for k in counts:
-    print(f"{k}: {counts[k]}")
+    print(f"'{k}': {counts[k]}")

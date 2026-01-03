@@ -28,3 +28,22 @@ def get_letter_counts(path_to_file):
             counts[letter] = 1
     return counts
 
+def sort_on(items):
+    return items["num"]
+
+def sort_dict(counts):
+    my_list = []
+    v = 0
+    d = {}
+    for k in counts:
+        val = counts[k]
+        d = {"char": k, "num": val}
+        my_list.append(d)
+
+    my_list.sort(key=sort_on, reverse=True)       
+    # debug
+    # print("##debug, now sorted list:")
+    # for j in range(0, len(my_list)):
+    #     print(f"{j}: {my_list[j]}")
+
+    return my_list
